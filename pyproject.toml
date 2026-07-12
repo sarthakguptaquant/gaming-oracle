@@ -1,0 +1,22 @@
+[project]
+name = "gaming-oracle"
+version = "0.1.0"
+description = "A constructive inverse-backtester that prices the Maximum Undetectable Lie a VaR/ES validation panel admits."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "matplotlib>=3.10",
+    "numpy>=2.4.6",
+    "pytest>=9.1.1",
+    "scipy>=1.17.1",
+    "yfinance>=1.4.1",
+]
+
+[project.optional-dependencies]
+# matplotlib is a core dependency so the single `uv run` reproduce path includes
+# the figures. This extra is retained as a no-op alias so the old
+# `uv run --extra figures ...` invocation still works.
+figures = [
+    "matplotlib>=3.10",
+]
