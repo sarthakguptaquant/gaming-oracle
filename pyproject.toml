@@ -1,0 +1,21 @@
+[project]
+name = "gaming-oracle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10",
+    "numpy>=2.4.6",
+    "pytest>=9.1.1",
+    "scipy>=1.17.1",
+    "yfinance>=1.4.1",
+]
+
+[project.optional-dependencies]
+# matplotlib is now a CORE dependency so the single `uv run` reproduce path
+# includes the figures (no separate --extra needed). This extra is retained as a
+# no-op alias so the old `uv run --extra figures ...` invocation still works.
+figures = [
+    "matplotlib>=3.10",
+]
